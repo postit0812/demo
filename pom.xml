@@ -26,6 +26,11 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/monitoring-ui/dist</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -33,7 +38,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>src/main/resources/static</directory>
+                            <directory>monitoring-ui/dist/static</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
@@ -49,7 +54,7 @@
                 <executions>
                     <execution>
                         <id>install</id>
-                        <phase>compile</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
@@ -63,7 +68,7 @@
                     </execution>
                     <execution>
                         <id>build</id>
-                        <phase>compile</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
