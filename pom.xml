@@ -28,7 +28,7 @@
     <build>
         <resources>
             <resource>
-                <directory>src/monitoring-ui/dist</directory>
+                <directory>${project.basedir}/src/monitoring-ui/dist</directory>
             </resource>
         </resources>
         <plugins>
@@ -38,7 +38,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>monitoring-ui/dist/static</directory>
+                            <directory>${project.basedir}/src/monitoring-ui/dist</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
